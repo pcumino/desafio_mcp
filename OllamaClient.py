@@ -1,8 +1,15 @@
 #!/usr/bin/env python3
 
-"""
-Optimized Ollama Client following OpenAI pattern for MCP tools integration
-"""
+#===========================================================#
+#File Name:			OllamaClient.py
+#Author:			Pedro Cumino
+#Email:				pedro.cumino@gmail.com
+#Creation Date:		Thu Sep 25 11:30:36 2025
+#Last Modified:		Sun Sep 28 11:47:50 2025
+#Description:
+#Args:
+#Usage:
+#===========================================================#
 
 import argparse
 
