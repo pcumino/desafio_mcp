@@ -1,0 +1,19 @@
+[project]
+name = "desafio-mcp"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "faker>=37.8.0",
+    "fastmcp>=2.12.3",
+    "langchain>=0.3.27",
+    "langchain-community>=0.3.30",
+    "langchain-ollama>=0.3.8",
+    "mcp[cli]>=1.14.1",
+    "mkdocs>=1.6.1",
+    "mkdocs-material>=9.6.20",
+    "mkdocs-mermaid2-plugin>=1.2.2",
+    "ollama>=0.6.0",
+    "pandas>=2.3.2",
+]

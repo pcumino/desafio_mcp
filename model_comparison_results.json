@@ -1,0 +1,1290 @@
+{
+  "timestamp": "2025-09-27 22:46:19",
+  "sample_size": null,
+  "total_models_tested": 4,
+  "failed_models": 0,
+  "question_failure_analysis": [
+    {
+      "question": "Existe algum carro com motor 1.0 no banco de dados?",
+      "failures": 4,
+      "total": 4,
+      "failure_rate": 100.0
+    },
+    {
+      "question": "Liste todos os modelos de carros que usam combust\u00edvel h\u00edbrido.",
+      "failures": 4,
+      "total": 4,
+      "failure_rate": 100.0
+    },
+    {
+      "question": "Show me all cars manufactured after 2020 that use hybrid fuel. Then, count how many are in \"seminovo\" condition.",
+      "failures": 3,
+      "total": 4,
+      "failure_rate": 75.0
+    },
+    {
+      "question": "List all models with manual transmission, grouped by brand. After that, tell me which group has the highest mileage average.",
+      "failures": 3,
+      "total": 4,
+      "failure_rate": 75.0
+    },
+    {
+      "question": "List all cars added in 2022. Then, sort them by engine size in descending order.",
+      "failures": 3,
+      "total": 4,
+      "failure_rate": 75.0
+    },
+    {
+      "question": "Quantos carros da marca Chevrolet existem no banco de dados?",
+      "failures": 2,
+      "total": 4,
+      "failure_rate": 50.0
+    },
+    {
+      "question": "Qual \u00e9 a quilometragem do Hyundai Elantra 2017?",
+      "failures": 2,
+      "total": 4,
+      "failure_rate": 50.0
+    },
+    {
+      "question": "Qual foi a data de adi\u00e7\u00e3o mais recente no banco?",
+      "failures": 2,
+      "total": 4,
+      "failure_rate": 50.0
+    },
+    {
+      "question": "Quais ve\u00edculos possuem apenas 2 portas?",
+      "failures": 2,
+      "total": 4,
+      "failure_rate": 50.0
+    },
+    {
+      "question": "Find me all Toyota cars with low mileage lower than 38576 kilometers. Then, list all available models from the brand Ford.",
+      "failures": 2,
+      "total": 4,
+      "failure_rate": 50.0
+    },
+    {
+      "question": "Find all vehicles with more than 4 doors. Then, among them, give me the one with the lowest mileage.",
+      "failures": 2,
+      "total": 4,
+      "failure_rate": 50.0
+    },
+    {
+      "question": "Provide the total number of cars by fuel type. Afterward, show me which color is most frequent in the dataset.",
+      "failures": 2,
+      "total": 4,
+      "failure_rate": 50.0
+    },
+    {
+      "question": "Qual \u00e9 o carro mais antigo registrado e de que ano ele \u00e9?",
+      "failures": 1,
+      "total": 4,
+      "failure_rate": 25.0
+    },
+    {
+      "question": "Quais s\u00e3o as cores dispon\u00edveis entre os carros cadastrados?",
+      "failures": 1,
+      "total": 4,
+      "failure_rate": 25.0
+    },
+    {
+      "question": "Quais carros t\u00eam transmiss\u00e3o manual e ainda est\u00e3o na condi\u00e7\u00e3o seminovo?",
+      "failures": 1,
+      "total": 4,
+      "failure_rate": 25.0
+    },
+    {
+      "question": "Liste todos os carros cadastrados com condi\u00e7\u00e3o \"usado regular\".",
+      "failures": 1,
+      "total": 4,
+      "failure_rate": 25.0
+    },
+    {
+      "question": "What are the available car brands in the dataset?",
+      "failures": 1,
+      "total": 4,
+      "failure_rate": 25.0
+    },
+    {
+      "question": "List the car brands sorted by the number of cars of each branch",
+      "failures": 1,
+      "total": 4,
+      "failure_rate": 25.0
+    },
+    {
+      "question": "Provide me a summary of the current available cars",
+      "failures": 1,
+      "total": 4,
+      "failure_rate": 25.0
+    },
+    {
+      "question": "Encontre todos os carros Toyota com quilometragem inferior a 38576 quil\u00f4metros. Em seguida, liste todos os modelos dispon\u00edveis da marca Ford.",
+      "failures": 1,
+      "total": 4,
+      "failure_rate": 25.0
+    }
+  ],
+  "results": [
+    {
+      "model": "qwen3-coder:480b-cloud",
+      "total_tests": 20,
+      "passed": 14,
+      "failed": 4,
+      "errors": 2,
+      "total_time": 138.359441280365,
+      "avg_response_time": 6.877552795410156,
+      "details": [
+        {
+          "category": "basics",
+          "question": "Quantos carros da marca Chevrolet existem no banco de dados?",
+          "expected_tools": [
+            "get_cars_count_by_brand"
+          ],
+          "actual_tools": [
+            "check_value_exists"
+          ],
+          "status": "FAILED",
+          "response_length": 59,
+          "response_time": 2.345705986022949,
+          "tool_count": 1
+        },
+        {
+          "category": "basics",
+          "question": "Existe algum carro com motor 1.0 no banco de dados?",
+          "expected_tools": [
+            "search_cars_by_keyword"
+          ],
+          "actual_tools": [
+            "check_value_exists"
+          ],
+          "status": "FAILED",
+          "response_length": 629,
+          "response_time": 15.41457986831665,
+          "tool_count": 1
+        },
+        {
+          "category": "basics",
+          "question": "Qual \u00e9 a quilometragem do Hyundai Elantra 2017?",
+          "expected_tools": [
+            "filter_cars_by_criteria"
+          ],
+          "actual_tools": [
+            "filter_cars_by_criteria"
+          ],
+          "status": "PASSED",
+          "response_length": 59,
+          "response_time": 2.0322301387786865,
+          "tool_count": 1
+        },
+        {
+          "category": "basics",
+          "question": "Qual foi a data de adi\u00e7\u00e3o mais recente no banco?",
+          "expected_tools": [
+            "get_cars_sorted_by"
+          ],
+          "actual_tools": [
+            "get_car_statistics"
+          ],
+          "status": "FAILED",
+          "response_length": 281,
+          "response_time": 8.511873960494995,
+          "tool_count": 1
+        },
+        {
+          "category": "basics",
+          "question": "Qual \u00e9 o carro mais antigo registrado e de que ano ele \u00e9?",
+          "expected_tools": [
+            "get_cars_sorted_by"
+          ],
+          "actual_tools": [
+            "get_cars_sorted_by"
+          ],
+          "status": "PASSED",
+          "response_length": 88,
+          "response_time": 2.1284573078155518,
+          "tool_count": 1
+        },
+        {
+          "category": "basics",
+          "question": "Quais s\u00e3o as cores dispon\u00edveis entre os carros cadastrados?",
+          "expected_tools": [
+            "get_available_values"
+          ],
+          "actual_tools": [
+            "get_available_values"
+          ],
+          "status": "PASSED",
+          "response_length": 889,
+          "response_time": 8.9984450340271,
+          "tool_count": 1
+        },
+        {
+          "category": "intermediates",
+          "question": "Liste todos os modelos de carros que usam combust\u00edvel h\u00edbrido.",
+          "expected_tools": [
+            "filter_cars_by_criteria"
+          ],
+          "actual_tools": [],
+          "status": "ERROR",
+          "error": "Invalid tool usage: mismatch between tool calls and tool results (status code: 400)",
+          "response_time": 1.1071717739105225,
+          "tool_count": 0
+        },
+        {
+          "category": "intermediates",
+          "question": "Quais ve\u00edculos possuem apenas 2 portas?",
+          "expected_tools": [
+            "filter_cars_by_criteria"
+          ],
+          "actual_tools": [
+            "filter_cars_by_criteria"
+          ],
+          "status": "PASSED",
+          "response_length": 3078,
+          "response_time": 19.65890097618103,
+          "tool_count": 1
+        },
+        {
+          "category": "intermediates",
+          "question": "Quais carros t\u00eam transmiss\u00e3o manual e ainda est\u00e3o na condi\u00e7\u00e3o seminovo?",
+          "expected_tools": [
+            "filter_cars_by_criteria"
+          ],
+          "actual_tools": [
+            "filter_cars_by_criteria"
+          ],
+          "status": "PASSED",
+          "response_length": 518,
+          "response_time": 5.062664031982422,
+          "tool_count": 1
+        },
+        {
+          "category": "intermediates",
+          "question": "Liste todos os carros cadastrados com condi\u00e7\u00e3o \"usado regular\".",
+          "expected_tools": [
+            "filter_cars_by_criteria"
+          ],
+          "actual_tools": [
+            "filter_cars_by_criteria"
+          ],
+          "status": "PASSED",
+          "response_length": 2530,
+          "response_time": 10.138547897338867,
+          "tool_count": 1
+        },
+        {
+          "category": "intermediates",
+          "question": "What are the available car brands in the dataset?",
+          "expected_tools": [
+            "get_available_values"
+          ],
+          "actual_tools": [
+            "get_available_values"
+          ],
+          "status": "PASSED",
+          "response_length": 140,
+          "response_time": 2.354360818862915,
+          "tool_count": 1
+        },
+        {
+          "category": "advanced",
+          "question": "List the car brands sorted by the number of cars of each branch",
+          "expected_tools": [
+            "get_cars_count_by_brand"
+          ],
+          "actual_tools": [
+            "get_cars_count_by_brand"
+          ],
+          "status": "PASSED",
+          "response_length": 289,
+          "response_time": 3.5820088386535645,
+          "tool_count": 1
+        },
+        {
+          "category": "advanced",
+          "question": "Provide me a summary of the current available cars",
+          "expected_tools": [
+            "get_car_statistics"
+          ],
+          "actual_tools": [
+            "get_car_statistics"
+          ],
+          "status": "PASSED",
+          "response_length": 1056,
+          "response_time": 7.626927852630615,
+          "tool_count": 1
+        },
+        {
+          "category": "complex",
+          "question": "Find me all Toyota cars with low mileage lower than 38576 kilometers. Then, list all available models from the brand Ford.",
+          "expected_tools": [
+            "filter_cars_by_criteria",
+            "filter_cars_by_criteria"
+          ],
+          "actual_tools": [
+            "filter_cars_by_criteria",
+            "get_available_values"
+          ],
+          "status": "PASSED",
+          "response_length": 46,
+          "response_time": 3.0467710494995117,
+          "tool_count": 2
+        },
+        {
+          "category": "complex",
+          "question": "Encontre todos os carros Toyota com quilometragem inferior a 38576 quil\u00f4metros. Em seguida, liste todos os modelos dispon\u00edveis da marca Ford.",
+          "expected_tools": [
+            "filter_cars_by_criteria",
+            "filter_cars_by_criteria"
+          ],
+          "actual_tools": [
+            "filter_cars_by_criteria",
+            "get_available_values"
+          ],
+          "status": "PASSED",
+          "response_length": 46,
+          "response_time": 2.8444180488586426,
+          "tool_count": 2
+        },
+        {
+          "category": "complex",
+          "question": "Show me all cars manufactured after 2020 that use hybrid fuel. Then, count how many are in \"seminovo\" condition.",
+          "expected_tools": [
+            "filter_cars_by_criteria",
+            "filter_cars_by_criteria"
+          ],
+          "actual_tools": [],
+          "status": "ERROR",
+          "error": "Invalid tool usage: mismatch between tool calls and tool results (status code: 400)",
+          "response_time": 3.1445839405059814,
+          "tool_count": 0
+        },
+        {
+          "category": "complex",
+          "question": "List all models with manual transmission, grouped by brand. After that, tell me which group has the highest mileage average.",
+          "expected_tools": [
+            "filter_cars_by_criteria",
+            "get_grouped_statistics"
+          ],
+          "actual_tools": [
+            "filter_cars_by_criteria"
+          ],
+          "status": "FAILED",
+          "response_length": 46,
+          "response_time": 2.384361982345581,
+          "tool_count": 1
+        },
+        {
+          "category": "complex",
+          "question": "Find all vehicles with more than 4 doors. Then, among them, give me the one with the lowest mileage.",
+          "expected_tools": [
+            "filter_cars_by_criteria",
+            "get_cars_sorted_by"
+          ],
+          "actual_tools": [
+            "filter_cars_by_criteria",
+            "get_cars_sorted_by"
+          ],
+          "status": "PASSED",
+          "response_length": 1625,
+          "response_time": 17.119824171066284,
+          "tool_count": 2
+        },
+        {
+          "category": "complex",
+          "question": "Provide the total number of cars by fuel type. Afterward, show me which color is most frequent in the dataset.",
+          "expected_tools": [
+            "get_column_value_distribution",
+            "get_column_value_distribution"
+          ],
+          "actual_tools": [
+            "get_grouped_statistics",
+            "get_column_value_distribution"
+          ],
+          "status": "PASSED",
+          "response_length": 93,
+          "response_time": 7.250469207763672,
+          "tool_count": 2
+        },
+        {
+          "category": "complex",
+          "question": "List all cars added in 2022. Then, sort them by engine size in descending order.",
+          "expected_tools": [
+            "filter_cars_by_date_range",
+            "get_cars_sorted_by"
+          ],
+          "actual_tools": [
+            "filter_cars_by_date_range",
+            "get_cars_sorted_by"
+          ],
+          "status": "PASSED",
+          "response_length": 898,
+          "response_time": 12.798753023147583,
+          "tool_count": 2
+        }
+      ]
+    },
+    {
+      "model": "gpt-oss:20b-cloud",
+      "total_tests": 20,
+      "passed": 12,
+      "failed": 6,
+      "errors": 2,
+      "total_time": 284.33034801483154,
+      "avg_response_time": 14.161401295661927,
+      "details": [
+        {
+          "category": "basics",
+          "question": "Quantos carros da marca Chevrolet existem no banco de dados?",
+          "expected_tools": [
+            "get_cars_count_by_brand"
+          ],
+          "actual_tools": [
+            "get_cars_count_by_brand"
+          ],
+          "status": "PASSED",
+          "response_length": 71,
+          "response_time": 1.6642460823059082,
+          "tool_count": 1
+        },
+        {
+          "category": "basics",
+          "question": "Existe algum carro com motor 1.0 no banco de dados?",
+          "expected_tools": [
+            "search_cars_by_keyword"
+          ],
+          "actual_tools": [
+            "filter_cars_by_criteria"
+          ],
+          "status": "FAILED",
+          "response_length": 571,
+          "response_time": 3.1655521392822266,
+          "tool_count": 1
+        },
+        {
+          "category": "basics",
+          "question": "Qual \u00e9 a quilometragem do Hyundai Elantra 2017?",
+          "expected_tools": [
+            "filter_cars_by_criteria"
+          ],
+          "actual_tools": [
+            "filter_cars_by_criteria"
+          ],
+          "status": "PASSED",
+          "response_length": 56,
+          "response_time": 2.2613000869750977,
+          "tool_count": 1
+        },
+        {
+          "category": "basics",
+          "question": "Qual foi a data de adi\u00e7\u00e3o mais recente no banco?",
+          "expected_tools": [
+            "get_cars_sorted_by"
+          ],
+          "actual_tools": [
+            "get_cars_sorted_by"
+          ],
+          "status": "PASSED",
+          "response_length": 99,
+          "response_time": 2.662832736968994,
+          "tool_count": 1
+        },
+        {
+          "category": "basics",
+          "question": "Qual \u00e9 o carro mais antigo registrado e de que ano ele \u00e9?",
+          "expected_tools": [
+            "get_cars_sorted_by"
+          ],
+          "actual_tools": [
+            "get_cars_sorted_by"
+          ],
+          "status": "PASSED",
+          "response_length": 87,
+          "response_time": 3.1733789443969727,
+          "tool_count": 1
+        },
+        {
+          "category": "basics",
+          "question": "Quais s\u00e3o as cores dispon\u00edveis entre os carros cadastrados?",
+          "expected_tools": [
+            "get_available_values"
+          ],
+          "actual_tools": [
+            "get_available_values"
+          ],
+          "status": "PASSED",
+          "response_length": 1138,
+          "response_time": 3.693647861480713,
+          "tool_count": 1
+        },
+        {
+          "category": "intermediates",
+          "question": "Liste todos os modelos de carros que usam combust\u00edvel h\u00edbrido.",
+          "expected_tools": [
+            "filter_cars_by_criteria"
+          ],
+          "actual_tools": [],
+          "status": "ERROR",
+          "error": "Invalid tool usage: mismatch between tool calls and tool results (status code: 400)",
+          "response_time": 1.8008418083190918,
+          "tool_count": 0
+        },
+        {
+          "category": "intermediates",
+          "question": "Quais ve\u00edculos possuem apenas 2 portas?",
+          "expected_tools": [
+            "filter_cars_by_criteria"
+          ],
+          "actual_tools": [
+            "filter_cars_by_criteria"
+          ],
+          "status": "PASSED",
+          "response_length": 4090,
+          "response_time": 33.80226516723633,
+          "tool_count": 1
+        },
+        {
+          "category": "intermediates",
+          "question": "Quais carros t\u00eam transmiss\u00e3o manual e ainda est\u00e3o na condi\u00e7\u00e3o seminovo?",
+          "expected_tools": [
+            "filter_cars_by_criteria"
+          ],
+          "actual_tools": [
+            "filter_cars_by_criteria"
+          ],
+          "status": "PASSED",
+          "response_length": 826,
+          "response_time": 4.298821687698364,
+          "tool_count": 1
+        },
+        {
+          "category": "intermediates",
+          "question": "Liste todos os carros cadastrados com condi\u00e7\u00e3o \"usado regular\".",
+          "expected_tools": [
+            "filter_cars_by_criteria"
+          ],
+          "actual_tools": [
+            "filter_cars_by_criteria"
+          ],
+          "status": "PASSED",
+          "response_length": 2479,
+          "response_time": 12.101151943206787,
+          "tool_count": 1
+        },
+        {
+          "category": "intermediates",
+          "question": "What are the available car brands in the dataset?",
+          "expected_tools": [
+            "get_available_values"
+          ],
+          "actual_tools": [
+            "get_available_values"
+          ],
+          "status": "PASSED",
+          "response_length": 182,
+          "response_time": 2.5103018283843994,
+          "tool_count": 1
+        },
+        {
+          "category": "advanced",
+          "question": "List the car brands sorted by the number of cars of each branch",
+          "expected_tools": [
+            "get_cars_count_by_brand"
+          ],
+          "actual_tools": [
+            "get_cars_count_by_brand"
+          ],
+          "status": "PASSED",
+          "response_length": 515,
+          "response_time": 3.2743659019470215,
+          "tool_count": 1
+        },
+        {
+          "category": "advanced",
+          "question": "Provide me a summary of the current available cars",
+          "expected_tools": [
+            "get_car_statistics"
+          ],
+          "actual_tools": [
+            "get_car_statistics"
+          ],
+          "status": "PASSED",
+          "response_length": 998,
+          "response_time": 3.189471960067749,
+          "tool_count": 1
+        },
+        {
+          "category": "complex",
+          "question": "Find me all Toyota cars with low mileage lower than 38576 kilometers. Then, list all available models from the brand Ford.",
+          "expected_tools": [
+            "filter_cars_by_criteria",
+            "filter_cars_by_criteria"
+          ],
+          "actual_tools": [
+            "get_car_statistics"
+          ],
+          "status": "FAILED",
+          "response_length": 41,
+          "response_time": 55.68755316734314,
+          "tool_count": 1
+        },
+        {
+          "category": "complex",
+          "question": "Encontre todos os carros Toyota com quilometragem inferior a 38576 quil\u00f4metros. Em seguida, liste todos os modelos dispon\u00edveis da marca Ford.",
+          "expected_tools": [
+            "filter_cars_by_criteria",
+            "filter_cars_by_criteria"
+          ],
+          "actual_tools": [
+            "filter_cars_by_criteria"
+          ],
+          "status": "PASSED",
+          "response_length": 46,
+          "response_time": 25.062681913375854,
+          "tool_count": 1
+        },
+        {
+          "category": "complex",
+          "question": "Show me all cars manufactured after 2020 that use hybrid fuel. Then, count how many are in \"seminovo\" condition.",
+          "expected_tools": [
+            "filter_cars_by_criteria",
+            "filter_cars_by_criteria"
+          ],
+          "actual_tools": [],
+          "status": "ERROR",
+          "error": "Invalid tool usage: mismatch between tool calls and tool results (status code: 400)",
+          "response_time": 1.6302859783172607,
+          "tool_count": 0
+        },
+        {
+          "category": "complex",
+          "question": "List all models with manual transmission, grouped by brand. After that, tell me which group has the highest mileage average.",
+          "expected_tools": [
+            "filter_cars_by_criteria",
+            "get_grouped_statistics"
+          ],
+          "actual_tools": [
+            "filter_cars_by_criteria"
+          ],
+          "status": "FAILED",
+          "response_length": 1938,
+          "response_time": 34.65436887741089,
+          "tool_count": 1
+        },
+        {
+          "category": "complex",
+          "question": "Find all vehicles with more than 4 doors. Then, among them, give me the one with the lowest mileage.",
+          "expected_tools": [
+            "filter_cars_by_criteria",
+            "get_cars_sorted_by"
+          ],
+          "actual_tools": [
+            "filter_cars_by_criteria"
+          ],
+          "status": "FAILED",
+          "response_length": 550,
+          "response_time": 32.08545684814453,
+          "tool_count": 1
+        },
+        {
+          "category": "complex",
+          "question": "Provide the total number of cars by fuel type. Afterward, show me which color is most frequent in the dataset.",
+          "expected_tools": [
+            "get_column_value_distribution",
+            "get_column_value_distribution"
+          ],
+          "actual_tools": [
+            "get_grouped_statistics"
+          ],
+          "status": "FAILED",
+          "response_length": 46,
+          "response_time": 2.2520110607147217,
+          "tool_count": 1
+        },
+        {
+          "category": "complex",
+          "question": "List all cars added in 2022. Then, sort them by engine size in descending order.",
+          "expected_tools": [
+            "filter_cars_by_date_range",
+            "get_cars_sorted_by"
+          ],
+          "actual_tools": [
+            "get_grouped_statistics"
+          ],
+          "status": "FAILED",
+          "response_length": 41,
+          "response_time": 54.257489919662476,
+          "tool_count": 1
+        }
+      ]
+    },
+    {
+      "model": "llama3.2:latest",
+      "total_tests": 20,
+      "passed": 15,
+      "failed": 5,
+      "errors": 0,
+      "total_time": 253.1073579788208,
+      "avg_response_time": 12.59356871843338,
+      "details": [
+        {
+          "category": "basics",
+          "question": "Quantos carros da marca Chevrolet existem no banco de dados?",
+          "expected_tools": [
+            "get_cars_count_by_brand"
+          ],
+          "actual_tools": [
+            "get_cars_count_by_brand"
+          ],
+          "status": "PASSED",
+          "response_length": 59,
+          "response_time": 10.773118257522583,
+          "tool_count": 1
+        },
+        {
+          "category": "basics",
+          "question": "Existe algum carro com motor 1.0 no banco de dados?",
+          "expected_tools": [
+            "search_cars_by_keyword"
+          ],
+          "actual_tools": [
+            "check_value_exists"
+          ],
+          "status": "FAILED",
+          "response_length": 917,
+          "response_time": 16.569827795028687,
+          "tool_count": 1
+        },
+        {
+          "category": "basics",
+          "question": "Qual \u00e9 a quilometragem do Hyundai Elantra 2017?",
+          "expected_tools": [
+            "filter_cars_by_criteria"
+          ],
+          "actual_tools": [
+            "get_column_value_distribution"
+          ],
+          "status": "FAILED",
+          "response_length": 324,
+          "response_time": 8.701957941055298,
+          "tool_count": 1
+        },
+        {
+          "category": "basics",
+          "question": "Qual foi a data de adi\u00e7\u00e3o mais recente no banco?",
+          "expected_tools": [
+            "get_cars_sorted_by"
+          ],
+          "actual_tools": [
+            "get_cars_sorted_by"
+          ],
+          "status": "PASSED",
+          "response_length": 493,
+          "response_time": 7.472431898117065,
+          "tool_count": 1
+        },
+        {
+          "category": "basics",
+          "question": "Qual \u00e9 o carro mais antigo registrado e de que ano ele \u00e9?",
+          "expected_tools": [
+            "get_cars_sorted_by"
+          ],
+          "actual_tools": [
+            "get_cars_sorted_by"
+          ],
+          "status": "PASSED",
+          "response_length": 508,
+          "response_time": 8.94568681716919,
+          "tool_count": 1
+        },
+        {
+          "category": "basics",
+          "question": "Quais s\u00e3o as cores dispon\u00edveis entre os carros cadastrados?",
+          "expected_tools": [
+            "get_available_values"
+          ],
+          "actual_tools": [
+            "get_available_values"
+          ],
+          "status": "PASSED",
+          "response_length": 1140,
+          "response_time": 14.403941869735718,
+          "tool_count": 1
+        },
+        {
+          "category": "intermediates",
+          "question": "Liste todos os modelos de carros que usam combust\u00edvel h\u00edbrido.",
+          "expected_tools": [
+            "filter_cars_by_criteria"
+          ],
+          "actual_tools": [
+            "get_cars_sorted_by"
+          ],
+          "status": "FAILED",
+          "response_length": 562,
+          "response_time": 8.651593923568726,
+          "tool_count": 1
+        },
+        {
+          "category": "intermediates",
+          "question": "Quais ve\u00edculos possuem apenas 2 portas?",
+          "expected_tools": [
+            "filter_cars_by_criteria"
+          ],
+          "actual_tools": [
+            "get_cars_sorted_by"
+          ],
+          "status": "FAILED",
+          "response_length": 330,
+          "response_time": 7.177922964096069,
+          "tool_count": 1
+        },
+        {
+          "category": "intermediates",
+          "question": "Quais carros t\u00eam transmiss\u00e3o manual e ainda est\u00e3o na condi\u00e7\u00e3o seminovo?",
+          "expected_tools": [
+            "filter_cars_by_criteria"
+          ],
+          "actual_tools": [
+            "filter_cars_by_criteria"
+          ],
+          "status": "PASSED",
+          "response_length": 973,
+          "response_time": 18.965022802352905,
+          "tool_count": 1
+        },
+        {
+          "category": "intermediates",
+          "question": "Liste todos os carros cadastrados com condi\u00e7\u00e3o \"usado regular\".",
+          "expected_tools": [
+            "filter_cars_by_criteria"
+          ],
+          "actual_tools": [
+            "filter_cars_by_criteria"
+          ],
+          "status": "PASSED",
+          "response_length": 1095,
+          "response_time": 30.38382577896118,
+          "tool_count": 1
+        },
+        {
+          "category": "intermediates",
+          "question": "What are the available car brands in the dataset?",
+          "expected_tools": [
+            "get_available_values"
+          ],
+          "actual_tools": [
+            "get_available_values"
+          ],
+          "status": "PASSED",
+          "response_length": 140,
+          "response_time": 4.811049222946167,
+          "tool_count": 1
+        },
+        {
+          "category": "advanced",
+          "question": "List the car brands sorted by the number of cars of each branch",
+          "expected_tools": [
+            "get_cars_count_by_brand"
+          ],
+          "actual_tools": [
+            "get_cars_count_by_brand"
+          ],
+          "status": "PASSED",
+          "response_length": 201,
+          "response_time": 6.685813903808594,
+          "tool_count": 1
+        },
+        {
+          "category": "advanced",
+          "question": "Provide me a summary of the current available cars",
+          "expected_tools": [
+            "get_car_statistics"
+          ],
+          "actual_tools": [
+            "get_car_statistics"
+          ],
+          "status": "PASSED",
+          "response_length": 693,
+          "response_time": 10.569406986236572,
+          "tool_count": 1
+        },
+        {
+          "category": "complex",
+          "question": "Find me all Toyota cars with low mileage lower than 38576 kilometers. Then, list all available models from the brand Ford.",
+          "expected_tools": [
+            "filter_cars_by_criteria",
+            "filter_cars_by_criteria"
+          ],
+          "actual_tools": [
+            "get_cars_sorted_by",
+            "filter_cars_by_criteria",
+            "get_available_values"
+          ],
+          "status": "PASSED",
+          "response_length": 977,
+          "response_time": 13.95661187171936,
+          "tool_count": 3
+        },
+        {
+          "category": "complex",
+          "question": "Encontre todos os carros Toyota com quilometragem inferior a 38576 quil\u00f4metros. Em seguida, liste todos os modelos dispon\u00edveis da marca Ford.",
+          "expected_tools": [
+            "filter_cars_by_criteria",
+            "filter_cars_by_criteria"
+          ],
+          "actual_tools": [
+            "filter_cars_by_criteria",
+            "get_available_values",
+            "search_cars_by_keyword"
+          ],
+          "status": "PASSED",
+          "response_length": 579,
+          "response_time": 14.29879379272461,
+          "tool_count": 3
+        },
+        {
+          "category": "complex",
+          "question": "Show me all cars manufactured after 2020 that use hybrid fuel. Then, count how many are in \"seminovo\" condition.",
+          "expected_tools": [
+            "filter_cars_by_criteria",
+            "filter_cars_by_criteria"
+          ],
+          "actual_tools": [
+            "get_cars_sorted_by",
+            "filter_cars_by_criteria",
+            "get_cars_count_by_brand"
+          ],
+          "status": "PASSED",
+          "response_length": 2062,
+          "response_time": 25.58273482322693,
+          "tool_count": 3
+        },
+        {
+          "category": "complex",
+          "question": "List all models with manual transmission, grouped by brand. After that, tell me which group has the highest mileage average.",
+          "expected_tools": [
+            "filter_cars_by_criteria",
+            "get_grouped_statistics"
+          ],
+          "actual_tools": [
+            "get_grouped_statistics",
+            "filter_cars_by_criteria",
+            "get_grouped_statistics"
+          ],
+          "status": "PASSED",
+          "response_length": 289,
+          "response_time": 13.247200965881348,
+          "tool_count": 3
+        },
+        {
+          "category": "complex",
+          "question": "Find all vehicles with more than 4 doors. Then, among them, give me the one with the lowest mileage.",
+          "expected_tools": [
+            "filter_cars_by_criteria",
+            "get_cars_sorted_by"
+          ],
+          "actual_tools": [
+            "get_cars_sorted_by",
+            "filter_cars_by_criteria"
+          ],
+          "status": "PASSED",
+          "response_length": 459,
+          "response_time": 10.542426824569702,
+          "tool_count": 2
+        },
+        {
+          "category": "complex",
+          "question": "Provide the total number of cars by fuel type. Afterward, show me which color is most frequent in the dataset.",
+          "expected_tools": [
+            "get_column_value_distribution",
+            "get_column_value_distribution"
+          ],
+          "actual_tools": [
+            "get_cars_count_by_brand",
+            "get_column_value_distribution",
+            "get_available_values"
+          ],
+          "status": "PASSED",
+          "response_length": 291,
+          "response_time": 8.29062795639038,
+          "tool_count": 3
+        },
+        {
+          "category": "complex",
+          "question": "List all cars added in 2022. Then, sort them by engine size in descending order.",
+          "expected_tools": [
+            "filter_cars_by_date_range",
+            "get_cars_sorted_by"
+          ],
+          "actual_tools": [
+            "get_cars_sorted_by"
+          ],
+          "status": "FAILED",
+          "response_length": 913,
+          "response_time": 11.841377973556519,
+          "tool_count": 1
+        }
+      ]
+    },
+    {
+      "model": "gemma:2b",
+      "total_tests": 20,
+      "passed": 0,
+      "failed": 0,
+      "errors": 20,
+      "total_time": 2.347738027572632,
+      "avg_response_time": 0.06330490112304688,
+      "details": [
+        {
+          "category": "basics",
+          "question": "Quantos carros da marca Chevrolet existem no banco de dados?",
+          "expected_tools": [
+            "get_cars_count_by_brand"
+          ],
+          "actual_tools": [],
+          "status": "ERROR",
+          "error": "registry.ollama.ai/library/gemma:2b does not support tools (status code: 400)",
+          "response_time": 0.15449190139770508,
+          "tool_count": 0
+        },
+        {
+          "category": "basics",
+          "question": "Existe algum carro com motor 1.0 no banco de dados?",
+          "expected_tools": [
+            "search_cars_by_keyword"
+          ],
+          "actual_tools": [],
+          "status": "ERROR",
+          "error": "registry.ollama.ai/library/gemma:2b does not support tools (status code: 400)",
+          "response_time": 0.05665302276611328,
+          "tool_count": 0
+        },
+        {
+          "category": "basics",
+          "question": "Qual \u00e9 a quilometragem do Hyundai Elantra 2017?",
+          "expected_tools": [
+            "filter_cars_by_criteria"
+          ],
+          "actual_tools": [],
+          "status": "ERROR",
+          "error": "registry.ollama.ai/library/gemma:2b does not support tools (status code: 400)",
+          "response_time": 0.051621198654174805,
+          "tool_count": 0
+        },
+        {
+          "category": "basics",
+          "question": "Qual foi a data de adi\u00e7\u00e3o mais recente no banco?",
+          "expected_tools": [
+            "get_cars_sorted_by"
+          ],
+          "actual_tools": [],
+          "status": "ERROR",
+          "error": "registry.ollama.ai/library/gemma:2b does not support tools (status code: 400)",
+          "response_time": 0.05273914337158203,
+          "tool_count": 0
+        },
+        {
+          "category": "basics",
+          "question": "Qual \u00e9 o carro mais antigo registrado e de que ano ele \u00e9?",
+          "expected_tools": [
+            "get_cars_sorted_by"
+          ],
+          "actual_tools": [],
+          "status": "ERROR",
+          "error": "registry.ollama.ai/library/gemma:2b does not support tools (status code: 400)",
+          "response_time": 0.05426216125488281,
+          "tool_count": 0
+        },
+        {
+          "category": "basics",
+          "question": "Quais s\u00e3o as cores dispon\u00edveis entre os carros cadastrados?",
+          "expected_tools": [
+            "get_available_values"
+          ],
+          "actual_tools": [],
+          "status": "ERROR",
+          "error": "registry.ollama.ai/library/gemma:2b does not support tools (status code: 400)",
+          "response_time": 0.06437110900878906,
+          "tool_count": 0
+        },
+        {
+          "category": "intermediates",
+          "question": "Liste todos os modelos de carros que usam combust\u00edvel h\u00edbrido.",
+          "expected_tools": [
+            "filter_cars_by_criteria"
+          ],
+          "actual_tools": [],
+          "status": "ERROR",
+          "error": "registry.ollama.ai/library/gemma:2b does not support tools (status code: 400)",
+          "response_time": 0.0600130558013916,
+          "tool_count": 0
+        },
+        {
+          "category": "intermediates",
+          "question": "Quais ve\u00edculos possuem apenas 2 portas?",
+          "expected_tools": [
+            "filter_cars_by_criteria"
+          ],
+          "actual_tools": [],
+          "status": "ERROR",
+          "error": "registry.ollama.ai/library/gemma:2b does not support tools (status code: 400)",
+          "response_time": 0.06043291091918945,
+          "tool_count": 0
+        },
+        {
+          "category": "intermediates",
+          "question": "Quais carros t\u00eam transmiss\u00e3o manual e ainda est\u00e3o na condi\u00e7\u00e3o seminovo?",
+          "expected_tools": [
+            "filter_cars_by_criteria"
+          ],
+          "actual_tools": [],
+          "status": "ERROR",
+          "error": "registry.ollama.ai/library/gemma:2b does not support tools (status code: 400)",
+          "response_time": 0.06025075912475586,
+          "tool_count": 0
+        },
+        {
+          "category": "intermediates",
+          "question": "Liste todos os carros cadastrados com condi\u00e7\u00e3o \"usado regular\".",
+          "expected_tools": [
+            "filter_cars_by_criteria"
+          ],
+          "actual_tools": [],
+          "status": "ERROR",
+          "error": "registry.ollama.ai/library/gemma:2b does not support tools (status code: 400)",
+          "response_time": 0.060044050216674805,
+          "tool_count": 0
+        },
+        {
+          "category": "intermediates",
+          "question": "What are the available car brands in the dataset?",
+          "expected_tools": [
+            "get_available_values"
+          ],
+          "actual_tools": [],
+          "status": "ERROR",
+          "error": "registry.ollama.ai/library/gemma:2b does not support tools (status code: 400)",
+          "response_time": 0.06188011169433594,
+          "tool_count": 0
+        },
+        {
+          "category": "advanced",
+          "question": "List the car brands sorted by the number of cars of each branch",
+          "expected_tools": [
+            "get_cars_count_by_brand"
+          ],
+          "actual_tools": [],
+          "status": "ERROR",
+          "error": "registry.ollama.ai/library/gemma:2b does not support tools (status code: 400)",
+          "response_time": 0.06133890151977539,
+          "tool_count": 0
+        },
+        {
+          "category": "advanced",
+          "question": "Provide me a summary of the current available cars",
+          "expected_tools": [
+            "get_car_statistics"
+          ],
+          "actual_tools": [],
+          "status": "ERROR",
+          "error": "registry.ollama.ai/library/gemma:2b does not support tools (status code: 400)",
+          "response_time": 0.05760502815246582,
+          "tool_count": 0
+        },
+        {
+          "category": "complex",
+          "question": "Find me all Toyota cars with low mileage lower than 38576 kilometers. Then, list all available models from the brand Ford.",
+          "expected_tools": [
+            "filter_cars_by_criteria",
+            "filter_cars_by_criteria"
+          ],
+          "actual_tools": [],
+          "status": "ERROR",
+          "error": "registry.ollama.ai/library/gemma:2b does not support tools (status code: 400)",
+          "response_time": 0.059102773666381836,
+          "tool_count": 0
+        },
+        {
+          "category": "complex",
+          "question": "Encontre todos os carros Toyota com quilometragem inferior a 38576 quil\u00f4metros. Em seguida, liste todos os modelos dispon\u00edveis da marca Ford.",
+          "expected_tools": [
+            "filter_cars_by_criteria",
+            "filter_cars_by_criteria"
+          ],
+          "actual_tools": [],
+          "status": "ERROR",
+          "error": "registry.ollama.ai/library/gemma:2b does not support tools (status code: 400)",
+          "response_time": 0.05434393882751465,
+          "tool_count": 0
+        },
+        {
+          "category": "complex",
+          "question": "Show me all cars manufactured after 2020 that use hybrid fuel. Then, count how many are in \"seminovo\" condition.",
+          "expected_tools": [
+            "filter_cars_by_criteria",
+            "filter_cars_by_criteria"
+          ],
+          "actual_tools": [],
+          "status": "ERROR",
+          "error": "registry.ollama.ai/library/gemma:2b does not support tools (status code: 400)",
+          "response_time": 0.05770683288574219,
+          "tool_count": 0
+        },
+        {
+          "category": "complex",
+          "question": "List all models with manual transmission, grouped by brand. After that, tell me which group has the highest mileage average.",
+          "expected_tools": [
+            "filter_cars_by_criteria",
+            "get_grouped_statistics"
+          ],
+          "actual_tools": [],
+          "status": "ERROR",
+          "error": "registry.ollama.ai/library/gemma:2b does not support tools (status code: 400)",
+          "response_time": 0.059793949127197266,
+          "tool_count": 0
+        },
+        {
+          "category": "complex",
+          "question": "Find all vehicles with more than 4 doors. Then, among them, give me the one with the lowest mileage.",
+          "expected_tools": [
+            "filter_cars_by_criteria",
+            "get_cars_sorted_by"
+          ],
+          "actual_tools": [],
+          "status": "ERROR",
+          "error": "registry.ollama.ai/library/gemma:2b does not support tools (status code: 400)",
+          "response_time": 0.057482004165649414,
+          "tool_count": 0
+        },
+        {
+          "category": "complex",
+          "question": "Provide the total number of cars by fuel type. Afterward, show me which color is most frequent in the dataset.",
+          "expected_tools": [
+            "get_column_value_distribution",
+            "get_column_value_distribution"
+          ],
+          "actual_tools": [],
+          "status": "ERROR",
+          "error": "registry.ollama.ai/library/gemma:2b does not support tools (status code: 400)",
+          "response_time": 0.06053805351257324,
+          "tool_count": 0
+        },
+        {
+          "category": "complex",
+          "question": "List all cars added in 2022. Then, sort them by engine size in descending order.",
+          "expected_tools": [
+            "filter_cars_by_date_range",
+            "get_cars_sorted_by"
+          ],
+          "actual_tools": [],
+          "status": "ERROR",
+          "error": "registry.ollama.ai/library/gemma:2b does not support tools (status code: 400)",
+          "response_time": 0.06142711639404297,
+          "tool_count": 0
+        }
+      ]
+    }
+  ]
+}
