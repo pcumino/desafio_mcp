@@ -18,5 +18,3 @@ site/
 uv.lock
 
 docs_manager.py
-
-.github/workflows
