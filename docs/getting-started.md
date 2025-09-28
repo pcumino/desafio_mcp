@@ -37,7 +37,7 @@ ollama pull gemma:2b
 
 1. **Clone the repository:**
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/pcumino/desafio_mcp
 cd desafio_mcp
 ```
 
