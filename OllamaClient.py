@@ -112,12 +112,6 @@ class OllamaClient:
 			tools = await self.get_mcp_tools()
 
 			# Create a more explicit system prompt that forces tool usage
-# 			system_prompt = """\
-# You are a helpful assistant with access to car database tools. You MUST use the available tools to answer questions about cars. 
-# NEVER write pandas code or SQL queries. Instead, ALWAYS use ONLY the provided tools to get the actual data.
-# Available tools will be provided to you. When asked about cars, you must call the appropriate tools to get real data from the database.
-# Example: If asked about Toyota cars, use the search_cars_by_brand tool with brand="Toyota" parameter. Format the response in Markdown whenever it is possible.\
-# """
 			system_prompt = """\
 You are a helpful assistant with access to specialized car database tools.
 You MUST always use the provided tools to retrieve real data when answering questions about cars.
@@ -148,7 +142,6 @@ Your role: Interpret the query, choose the correct tool(s) and argument(s), exec
 			response = None
 			try:
 				response = await self.ollama_client.chat(
-					# model='qwen3-coder:480b-cloud',
 					model=self.model,
 					messages=messages,
 					tools=tools,
@@ -157,8 +150,7 @@ Your role: Interpret the query, choose the correct tool(s) and argument(s), exec
 			except Exception as e:
 				print(f'Exception {e}\n Trying use default model')
 				response = await self.ollama_client.chat(
-					# model='qwen3-coder:480b-cloud',
-					model=self.model,
+					model="llama3.2",
 					messages=messages,
 					tools=tools,
 					options=options
@@ -208,13 +200,8 @@ Your role: Interpret the query, choose the correct tool(s) and argument(s), exec
 
 
 			# Step 5: Generate final response with tool results
-			# [print(json.dumps(i, indent=2).replace('\\n','\n')) for i in messages]
-			# print("="*80)	
-			# [print(i, '\n') for i in messages]
-			# print("="*80)	
 			options = dict(temperature=0.13)  # Lower temperature for more deterministic tool usage
 			final_response = await self.ollama_client.chat(
-				# model='qwen3-coder:480b-cloud',
 				model=self.model,
 				messages=messages,
 				options=options

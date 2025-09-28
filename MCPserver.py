@@ -307,7 +307,7 @@ def get_cars_sorted_by(
     if limit:
         sorted_df = sorted_df.head(limit)
     
-    res = sorted_df.to_dict('records')
+    res = sorted_df[['brand','model',sort_by]].to_dict('records')
     return [
         {str(k): v for k, v in record.items()}
         for record in res
