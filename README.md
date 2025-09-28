@@ -47,7 +47,7 @@ ollama pull gemma:2b
 
 1. **Clone and setup environment:**
 ```bash
-git clone [https://github.com/pcumino/desafio_mcp](https://github.com/pcumino/desafio_mcp)
+git clone https://github.com/pcumino/desafio_mcp
 cd desafio_mcp
 pip install -r requirements.txt  # or use uv/poetry
 ```
