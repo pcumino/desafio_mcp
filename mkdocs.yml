@@ -91,7 +91,7 @@ markdown_extensions:
 
 # Navigation
 nav:
-  - Home: index.md
+  - Home: README.md
   - Getting Started: getting-started.md
   - Components: components.md
   - Usage Examples: examples.md
